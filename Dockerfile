@@ -1,4 +1,4 @@
-FROM node:12.16.3-alpine3.9 as build-step
+FROM node:12.6.3-alpine3.9 as build-step
 WORKDIR /app
 COPY package.json ./
 RUN npm install

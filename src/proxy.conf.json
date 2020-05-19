@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://tictactoespring-env.eba-yp3sdpni.us-east-2.elasticbeanstalk.com/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

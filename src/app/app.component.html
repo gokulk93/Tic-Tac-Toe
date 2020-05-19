@@ -1,0 +1,32 @@
+
+
+  <div class="title">
+    <span>{{title}}</span>
+  </div>
+
+<!-- <div class="row">
+    <div class="col-4 col-sm-4 col-md-4 col-lg-4"  *ngFor="let user of boardArr; index as i">
+    <button
+            id = {{i}}    class ="button"
+            [disabled] = "user.disabled"
+            #button
+            (click) = "isDisabled ? null: clickFunction(user,button.id)">
+            (click) = "clickFunction(user,button.id)" >
+        {{user}}
+      </button>
+  </div>
+</div> -->
+
+<div class="game-board notification-counter">
+  <span  *ngFor="let user of boardArr; index as i"> 
+    <div class="box"
+          id = {{i}}
+          [class.disabled] = "button.isDisabled"
+          #button
+          (click) = "clickFunction(user,button.id); button.isDisabled = true;" >
+      {{user}}
+    </div>
+  </span>
+</div>
+
+<button type= "button" *ngIf=!isShow (click)=reset()>Restart</button>
